@@ -1,4 +1,5 @@
 import * as stream from 'stream'
+import { Blob } from 'buffer'
 
 /*
  * Convert any of the stream types that S3 GetObject can return to a Buffer. AWS SDK v3
