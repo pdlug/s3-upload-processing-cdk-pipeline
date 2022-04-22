@@ -1,6 +1,6 @@
 {
   "name": "s3-upload-processing-cdk-pipeline",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Demonstrates how to upload directly to an S3 bucket and use a Lambda to process the uploaded content.",
   "main": "index.js",
   "scripts": {

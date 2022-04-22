@@ -1,6 +1,6 @@
 {
-  "name": "lambda-fns",
-  "version": "1.0.0",
+  "name": "@s3-upload-processing-cdk-pipeline/lambda-fns",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {

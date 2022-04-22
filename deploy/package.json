@@ -1,5 +1,5 @@
 {
-  "name": "deploy",
+  "name": "@s3-upload-processing-cdk-pipeline/deploy",
   "version": "0.1.0",
   "bin": {
     "deploy": "bin/deploy.js"
