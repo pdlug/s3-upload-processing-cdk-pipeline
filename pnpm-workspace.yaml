@@ -1,6 +1,0 @@
-packages:
-  - 'app'
-  - 'lambda-fns'
-  - 'deploy'
-  # exclude packages that are inside test directories
-  - '!**/test/**'
