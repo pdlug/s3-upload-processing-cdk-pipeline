@@ -7,9 +7,8 @@ import * as stream from 'stream'
  *
  * @see {@link https://github.com/aws/aws-sdk-js-v3/issues/1877}
  */
-export async function streamToBuffer(stream: stream.Readable | ReadableStream | Blob | undefined) {
+export async function streamToBuffer(stream: stream.Readable | Blob | undefined) {
   if (!stream) return
-  if (stream instanceof ReadableStream) throw new Error('ReadableStream unsupported')
   if (stream instanceof Blob) {
     return Buffer.from(await stream.arrayBuffer())
   }
