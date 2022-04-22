@@ -24,7 +24,8 @@ export class S3UploadProcessingPipelineStack extends cdk.Stack {
           triggerOnPush: true,
           connectionArn: githubConnectionArn,
         }),
-        commands: ['pnpm install', 'cd deploy', 'pnpm run build', 'npx cdk synth'],
+        commands: ['npm install -g pnpm', 'pnpm install', 'cd deploy', 'pnpm run build', 'npx cdk synth'],
+        primaryOutputDirectory: 'deploy/cdk.out',
       }),
       synthCodeBuildDefaults: {
         buildEnvironment: {
