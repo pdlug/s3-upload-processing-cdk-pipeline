@@ -1,8 +1,9 @@
 import * as AWSLambda from 'aws-lambda'
 import { S3 } from '@aws-sdk/client-s3'
 
-import * as sharp from 'sharp'
 import { streamToBuffer } from './s3util'
+
+const sharp = require('sharp')
 
 const bucketName = process.env.BUCKET!
 
