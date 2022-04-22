@@ -1,5 +1,6 @@
 import * as stream from 'stream'
 import { Blob } from 'buffer'
+import * as getStream from 'get-stream'
 
 /*
  * Convert any of the stream types that S3 GetObject can return to a Buffer. AWS SDK v3
@@ -14,6 +15,5 @@ export async function streamToBuffer(stream: stream.Readable | Blob | undefined)
     return Buffer.from(await stream.arrayBuffer())
   }
 
-  const payload = await stream.read()
-  return Buffer.from(payload)
+  return await getStream.buffer(stream)
 }

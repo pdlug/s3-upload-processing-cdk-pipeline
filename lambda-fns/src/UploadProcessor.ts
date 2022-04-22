@@ -33,7 +33,7 @@ export const handler: AWSLambda.S3Handler = async (event) => {
       })
 
       if (obj.ContentType?.match(/^image\//)) {
-        const original = await streamToBuffer(obj.Body as Blob | undefined)
+        const original = await streamToBuffer(obj.Body as any)
         const thumbnail = await sharp(original).resize(200).toFormat('png').toBuffer()
         await s3.putObject({
           Bucket: bucketName,
